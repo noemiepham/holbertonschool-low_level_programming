@@ -11,11 +11,11 @@ int main(void)
 	int n;
 
 	if (n > 0)
-		printf("%ud is positive \n", n);
+		printf("%u is positive \n", n);
 	else if (n == 0)
-		printf("%ud is zero \n", n);
+		printf("%u is zero \n", n);
 	else
-		printf("%ud is negative \n", n);
+		printf("%u is negative \n", n);
 
 	return (0);
 }
