@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 /**
  * main - Entry point
  *
@@ -8,6 +11,9 @@
 int main(void)
 {
 	int num;
+
+	srand(time(0));
+	num = rand() - RAND_MAX / 2;
 
 	if (num > 0)
 	{
