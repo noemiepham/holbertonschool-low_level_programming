@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - Entry point
  *
@@ -8,14 +7,19 @@
 
 int main(void)
 {
-	int n;
-
-	if (n > 0)
-		printf("%u is positive \n", n);
-	else if (n == 0)
-		printf("%u is zero \n", n);
+	int num=0;
+	
+	if (num > 0)
+	{
+		printf("%d is positive\n", num);
+	}
+	else if (num < 0)
+	{
+		printf("%d is negative\n", num);
+	}
 	else
-		printf("%u is negative \n", n);
-
+	{
+		printf("%d is zero\n", num);
+	}
 	return (0);
 }
