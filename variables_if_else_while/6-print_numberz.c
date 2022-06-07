@@ -1,25 +1,20 @@
 #include <unistd.h>
 /**
  * main - Entry point
- *
+ * ft_number - Entry point
  * Return: Always 0 (Success)
  */
 
-void ft_number(void)
+int main(void)
 {
-	int n; 
+	int n;
 
 	n = 48;
 	while (n <= 57)
 	{
 		write(1, &n, 1);
-		n ++;
+		n++;
 	}
-}
-
-int main(void)
-{
-	ft_number();
-	write(1,"\n",1);
+	write(1, "\n", 1);
 	return (0);
 }
