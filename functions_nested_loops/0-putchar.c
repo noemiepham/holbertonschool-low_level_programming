@@ -1,14 +1,20 @@
-#include <stdio.h>
-#include <unistd.h>
+#include "main.h"
 /**
  * main - Entry point
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	write(1, "_putchar", 8);
-	putchar('\n');
-return (0);
+	char c[] = "_putchar";
+	int i;
+
+	i = 0;
+	while (i < 9)
+	{
+		_putchar(c[i]);
+		i++;
+	}
+	_putchar('\n');
+	return (0);
 }
