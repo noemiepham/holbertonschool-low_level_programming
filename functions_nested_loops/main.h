@@ -1,5 +1,5 @@
-#ifndef MAIN_H_   /* Include guard */
-#define MAIN_H_
+#ifndef _MAIN_H_  /* Include guard */
+#define _ MAIN_H_
 
 int  _putchar(char c);
 
