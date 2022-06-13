@@ -21,12 +21,12 @@ void print_triangle(int size)
 		while (i < size)
 		{
 			l = 0;
-			while (l < size - i)
+			while (l <= (size - 2) - i)
 			{
 				_putchar(' ');
 			l++;
 			}
-			while (l <= size)
+			while (l < size)
 			{
 				_putchar(35);
 			l++;
