@@ -33,10 +33,10 @@ void rev_string(char *s)
 	int l;
 	int r;
 
-	l = _strlen(s);
+	l = _strlen(s) - 1;
 	r = l - 1;
 	i = 0;
-	while (i < r)
+	while (i < l / 2)
 	{
 		int temp;
 
@@ -44,6 +44,6 @@ void rev_string(char *s)
 		s[i] = s[r];
 		s[r] = temp;
 	r--;
+	i++;
 	}
 }
-
