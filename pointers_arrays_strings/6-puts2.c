@@ -6,13 +6,13 @@
 #include "main.h"
 
 /**
-* puts - Write a function that prints every other character of a string
+* puts2 - Write a function that prints every other character of a string
 * @str : string
 */
 
 void puts2(char *str)
 {
-	int i; 
+	int i;
 
 	i = 0;
 	while (str[i] != 0)
