@@ -33,7 +33,7 @@ void rev_string(char *s)
 	int l;
 	int r;
 
-	l = _strlen(s) - 1;
+	l = _strlen(s);
 	r = l - 1;
 	i = 0;
 	while (i < l / 2)
