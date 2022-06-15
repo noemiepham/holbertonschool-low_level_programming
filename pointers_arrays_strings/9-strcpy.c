@@ -54,6 +54,5 @@ char *_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 	i++;
 	}
-_putchar('\n');
 return (dest);
 }
