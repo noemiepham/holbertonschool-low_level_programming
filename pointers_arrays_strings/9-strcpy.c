@@ -1,8 +1,3 @@
-/*
-* File: 9. strcpy
-* Auth: NoémePHAM
-*/
-
 #include "main.h"
 #include <unistd.h>
 
