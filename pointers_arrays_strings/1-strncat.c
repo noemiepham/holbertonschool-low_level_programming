@@ -22,6 +22,7 @@ return (strlen);
 * *_strncat - concat les string
 * @dest: destitantion
 * @src: source string
+* @n: size copy
 * Return: dest
 */
 
@@ -37,7 +38,7 @@ char *_strncat(char *dest, char *src, int n)
 		dest[i + j] = src[i];
 		i++;
 	}
-	if (n > _strlen(src))
+	if (n > _strlen(src)/2)
 	{
 		dest[j + i] = 0;
 	}
