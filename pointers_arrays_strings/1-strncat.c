@@ -33,14 +33,12 @@ char *_strncat(char *dest, char *src, int n)
 
 	i = 0;
 	j = _strlen(dest);
-	while (n >= 1)
+	while (src[i] && n > 0)
 	{
 		dest[i + j] = src[i];
 		i++;
+		n--;
 	}
-	if (n >= _strlen(src)/2)
-	{
-		dest[j + i] = 0;
-	}
-return (dest);
+	dest[j + i] = 0;
+	return (dest);
 }
