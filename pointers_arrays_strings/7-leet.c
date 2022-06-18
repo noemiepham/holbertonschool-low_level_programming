@@ -14,15 +14,11 @@ char *leet(char *str)
 	i = 0;
 	while (str[i])
 	{
-		j = 0;
-		while (j <= 8)
+		for (j = 0; j <= 7; j++)
 		{
 			if (str[i] == leet[j] ||
-str[i] - 32 == leet[j])
-				{
-					str[i] = j + '0';
-				}
-				j++;
+			    str[i] - 32 == leet[j])
+				str[i] = j + '0';
 		}
 	i++;
 	}
