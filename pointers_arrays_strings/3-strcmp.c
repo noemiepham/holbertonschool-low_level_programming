@@ -1,37 +1,20 @@
 #include "main.h"
 /**
-* _strlen - string
-*@s:string
-*Return: strlen
-*/
-
-int _strlen(char *s)
-{
-	int strlen;
-
-	strlen = 0;
-	while (s[strlen] != '\0')
-	{
-		strlen++;
-	}
-	return (strlen);
-}
-
-/**
-* _strcmp - string comparer
-* @s1: string 1
-* @s2: string 2
-* Return:s1 - s2
+ * _strcmp - Compares pointers to two strings.
+ * @s1: A pointer to the first string to be compared.
+ * @s2: A pointer to the second string to be compared.
+ *Return: If str1 < str2, the negative difference
+ *         If str1 == str2, 0.
+ *         If str1 > str2, the positive difference.
 */
 
 int _strcmp(char *s1, char *s2)
 {
-	int i;
 
-	i = 0;
-	while (s1[i])
+	while (*s1 == *s2)
 	{
-		i++;
+		s1++;
+		s2++;
 	}
 return (*s1 - *s2);
 }
