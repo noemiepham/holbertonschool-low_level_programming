@@ -8,7 +8,7 @@
 char *leet(char *str)
 {
 	int i;
-	int str2[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
+	int leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};
 
 	i = 0;
 	while (str[i])
@@ -18,7 +18,7 @@ char *leet(char *str)
 		j = 0;
 		while (j <= 8)
 		{
-			if (str[i] == str2[j] || str[i] - 32 == str2[j])
+			if (str[i] == leet[j] || str[i] - 32 == leet[j])
 				str[i] = j + '0';
 				j++;
 		}
