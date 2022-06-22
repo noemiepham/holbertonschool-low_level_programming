@@ -1,7 +1,8 @@
 #include "main.h"
 #include <stdio.h>
-#include <string.h>
+#include <ctype.h>
 #include <stdlib.h>
+#include <string.h>
 /**
  * main - Entry point
  * @argc : length of arry argv
@@ -13,22 +14,20 @@
 
 int main(int argc, char *argv[])
 {
-	int sum;
 	int i;
+	int sum = 0;
 
-	if (argc == 0)
-	{
+	if (argc < 1)
 		printf("0\n");
-	}
-	if (argc >= 0 && argc <= 9)
+	for (i = 1; i < argc; i++)
 	{
-		printf("Error\n");
-		return (1);
-	}
-	sum = 0;
-	for (i = 0; i < argc; i++)
-	{
-		sum += atoi(argv[i]);
+		if (!isdigit(*argv[i]))
+		{
+			printf("Error\n");
+			return (1);
+		}
+		else
+			sum  += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
 	return (0);
