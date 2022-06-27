@@ -89,5 +89,7 @@ char *create_array(unsigned int size, char c);
 /**
 *C - More malloc, free
 */
+char *string_nconcat(char *s1, char *s2, unsigned int n);
+void *_calloc(unsigned int nmemb, unsigned int size);
 void *malloc_checked(unsigned int b);
 #endif
