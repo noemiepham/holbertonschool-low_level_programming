@@ -21,21 +21,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	for (i = 0; s1[i] != '\0'; i++)
 	for (j = 0; s2[j] != '\0'; j++)
-	array = (char *)malloc((i + j + 1) * sizeof(char));
+	if (n >= j)
+	{
+		n = j;
+		array = malloc((i + j + 1) * sizeof(char));
+	}
+	else
+		array = malloc((i + n + 1) * sizeof(char));
 	if (array == NULL)
 		return (NULL);
 	for (l = 0; l < i; l++)
 		array[l] = s1[l];
-	if (n >= j)
-	{
-		for (h = 0; h < j; h++)
-			array[l + h] = s2[h];
-	}
-	else
-	{
-		for (h = 0; h < n; h++)
-			array[l + h] = s2[h];
-	}
+	for (h = 0; h < j; h++)
+		array[l + h] = s2[h];
 array[l + n] = '\0';
 return (array);
 }
