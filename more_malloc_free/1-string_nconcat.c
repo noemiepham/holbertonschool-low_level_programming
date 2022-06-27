@@ -26,12 +26,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	for (l = 0; l < i; l++)
 		array[l] = s1[l];
-	for (h = 0; h < j; h++)
+	if (n >= j)
 	{
-		if (n >= h)
+		for (h = 0; h < j; h++)
 			array[l + h] = s2[h];
-		else
-			array[l + h] = s2[h + n];
 	}
+	else
+	{
+		for (h = 0; h < n; h++)
+			array[l + h] = s2[h];
+	}
+array[l + n] = '\0';
 return (array);
 }
