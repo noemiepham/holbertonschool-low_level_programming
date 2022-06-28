@@ -17,9 +17,10 @@ struct dog
 };
 
 /**
- * u_int - Typedef for unsigned int
+ * dog_d - Typedef for structdog
  */
-typedef unsigned int u_int;
+typedef struct dog dog_t;
+
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 #endif
