@@ -20,5 +20,6 @@ struct dog
  * u_int - Typedef for unsigned int
  */
 typedef unsigned int u_int;
+void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif
