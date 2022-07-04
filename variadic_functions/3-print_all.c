@@ -23,7 +23,7 @@ void print_all(const char * const format, ...)
 	{
 		if (n == (count - 1))
 		{
-			sep = " ";
+			sep = "";
 		}
 		switch (format[n])
 		{
