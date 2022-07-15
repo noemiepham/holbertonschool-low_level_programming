@@ -40,6 +40,6 @@ list_t *add_node_end(list_t **head, const char *str)
 		/* add the newNode at the end of the linked list */
 		tmp->next = new_node;
 	}
-	return (tmp);
+	return (*head);
 }
 
