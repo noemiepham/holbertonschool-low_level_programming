@@ -33,15 +33,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		{
 			previous->next = new_node;
 			new_node->next = current;
-			free(new_node);
-			current = NULL; /*arret la boucle */
 		}
 		else
 		{
 			previous = current;
 			current = current->next;
-			count++;
 		}
+			count++;
 	}
 	if (idx > count)
 	{
