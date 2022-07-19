@@ -5,7 +5,7 @@
  * @head: pointer to head
  * @index: position to get node
  * Return: node to be get
- */
+ */  
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	unsigned int i = 0;
