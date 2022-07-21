@@ -35,7 +35,7 @@ void error_file(int file_from, int file_to, char *argv[])
 int main(int argc, char *argv[])
 {
 	int src, dest, err_close;
-	unsigned int len, nwr;
+	int len, nwr;
 	char buf[1024];
 
 	if (argc != 3)
@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
 	src = open(argv[1], O_RDONLY);
 	dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	/*TRUNC = cause the files to be truncated if it exists */
-	error_file(file_from, file_to, argv);
+	error_file(src, dest, argv);
 
 	len = 1024;
 	while (len == 1024)
