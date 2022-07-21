@@ -37,7 +37,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		printf("index:%d%d", i, index);
 		return (-1);
 	}
-		else
+		if (i == index)
 	{
 		if (cursor->next == NULL)
 			cursor->prev->next = NULL;
