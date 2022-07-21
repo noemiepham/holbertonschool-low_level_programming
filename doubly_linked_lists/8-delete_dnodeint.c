@@ -32,6 +32,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		cursor = cursor->next;
 		i++;
 	}
+	printf("hello %d\n", i);
 		if (i > index)
 			return (-1);
 		else
