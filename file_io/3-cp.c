@@ -15,13 +15,13 @@ void error_file(int file_from, int file_to, char *argv[])
 {
 	if (file_from == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		/*stderr_fileno = 2*/
 		exit(98);
 	}
 	if (file_to == -1)
 	{
-		dprintf(2, "Error: Can't write to %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 }
@@ -61,13 +61,13 @@ int main(int argc, char *argv[])
 	err_close = close(src);
 	if (err_close == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", src);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", src);
 		exit(100);
 		/*dprintf = print to file descriptor*/
 	}
 	err_close = close(dest);
 	{
-		dprintf(2, "Error: Can't close fd %d\n", src);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", src);
 		exit(100);
 		/*dprintf = print to file descriptor*/
 	}
