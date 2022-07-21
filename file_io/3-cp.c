@@ -59,13 +59,8 @@ int main(int argc, char *argv[])
 			error_file(0, -1, argv);
 	}
 	err_close = close(src);
-	if (err_close == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", src);
-		exit(100);
-		/*dprintf = print to file descriptor*/
-	}
 	err_close = close(dest);
+	if (err_close == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", src);
 		exit(100);
