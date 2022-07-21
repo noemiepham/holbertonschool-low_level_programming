@@ -14,25 +14,20 @@ int append_text_to_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 
-	fptr = open(filename, O_RDWR | O_APPEND);
+	fptr = open(filename, O_WRONLY | O_APPEND);
 
 	if (fptr == -1)
 		return (-1);
-	while (text_content[len])
+
+	if (text_content)
 	{
+		while (text_content[len])
 		len++;
-	}
-	if (text_content == NULL)
-	{
-		close(fptr);
-		return (1);
-	}
-	else
-	{
 		wr = write(fptr, text_content, len);
+		if (wr == -1)
+			return (-1);
 	}
-	if (wr == -1)
-		return (-1);
+
 	close(fptr);
-	return (-1);
+	return (1);
 }
