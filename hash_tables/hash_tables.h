@@ -1,6 +1,8 @@
 #ifndef HASH_TABLES_h
 #define HASH_TABLES_h
 
+#define UNUSED(x) (void)(x);
+
 #include <stdio.h>
 #include <stdlib.h>
 /**
