@@ -14,13 +14,13 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	if (ht == NULL || key == NULL)
 		return (NULL);
 
-	index = key_index((const unsigned char *)key, ht_size);
+	index = key_index((const unsigned char *)key, ht->size);
 	node = ht->array[index];
 
 	while (node != NULL)
 	{
 		if (strcmp(key, node->key) == 0)
-			return (node);
+			return (node->value);
 
 		node = node->next;
 	}
