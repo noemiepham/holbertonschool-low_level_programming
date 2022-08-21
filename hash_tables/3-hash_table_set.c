@@ -35,9 +35,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (node->key == NULL)
 	{
 		free(node);
+		return (0);
+	}
+	node->value = strdup(value);
+	if (node->value == NULL)
+	{
+		free(node);
 		free(node->value);
 		return (0);
 	}
+
 	node->next = ht->array[index];
 	ht->array[index] = node;
 	return (1);
