@@ -7,7 +7,7 @@
 int main(void)
 {
 	int i = 0;
-	int sum, sum1;
+	int sum;
 
 	while (i < 1024)
 	{
