@@ -9,9 +9,8 @@ int main(void)
 {
 	unsigned long count, i, j, k, sum;
 
-	i = 0;
 	j = 1;
-	sum = i;
+	i = sum = 0;
 	for (count = 0; count < 50; count++)
 	{
 		k = i + j;
@@ -22,6 +21,6 @@ int main(void)
 			sum += k;
 		}
 	}
-	printf("%lu\n", k);
+	printf("%lu\n", sum);
 	return (0);
 }
