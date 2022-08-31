@@ -11,6 +11,7 @@ int main(void)
 
 	i = 0;
 	j = 1;
+	sum = i;
 	for (count = 0; count < 50; count++)
 	{
 		k = i + j;
