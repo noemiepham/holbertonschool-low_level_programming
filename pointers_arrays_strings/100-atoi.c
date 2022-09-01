@@ -6,10 +6,10 @@
  */
 int _isdigit(int c)
 {
-     if (c > 47 && c < 58)
-          return (1);
+	if (c > 47 && c < 58)
+		return (1);
 
-     return (0);
+	return (0);
 }
 /**
  * _atoi - convert a string to an integer.
@@ -18,27 +18,16 @@ int _isdigit(int c)
  */
 int _atoi(char *s)
 {
-     int number;
-     int i = 0;
-     int sign = 1;
-     unsigned int value = 0;
-     unsigned int pos = 1;
+	int sign = 1;
+	unsigned int num = 0;
 
-     for (number = 0; ((s[number] < '0') || (s[number] > '9')); number++)
-     {
-          if (s[number] == '-')
-               sign *= -1;
-     }
-     for (; _isdigit(s[number]); number++)
-     {
-          i++;
-     }
-     while (i > 0)
-     {
-          value += ((s[number - 1] - 48) * pos);
-          pos *= 10;
-          i--;
-          number--;
-     }
-     return (value * sign);
+	do {
+		if (*s == '-')
+			sign *= 1;
+		else if (*s >= '0' && *s <= '9')
+			num = (num * 10) + (*s - '0');
+		else if (num > 0)
+			break;
+	} while (*s++);
+	return (num * sign);
 }
