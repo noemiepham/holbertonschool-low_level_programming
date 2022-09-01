@@ -19,7 +19,7 @@ int main(void)
 		while ((2772 - 122) > s)
 		{
 			j = rand() % 62;
-			key[i] = c[i];
+			key[i] = c[j];
 			s += c[j];
 			i++;
 		}
