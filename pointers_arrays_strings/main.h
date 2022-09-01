@@ -30,7 +30,7 @@ void print_diagonal(int n);
 void print_square(int size);
 void print_triangle(int size);
 /*
-* Pointer_array_string
+* pointers_arrays_strings
 */
 void reset_to_98(int *n);
 void swap_int(int *a, int *b);
@@ -42,6 +42,8 @@ void puts2(char *str);
 void puts_half(char *str);
 void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
+char *rot13(char *);
+void print_number(int n);
 /*
 *more_pointer_array_string
 */
